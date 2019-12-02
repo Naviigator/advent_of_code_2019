@@ -2,6 +2,7 @@ extern crate rand;
 
 use std::io::{BufReader, BufRead};
 use std::fs::File;
+use crate::helper::print_if_sample;
 
 fn get_fuel_cost(weight: i32) -> i32 {
     return weight / 3 - 2;
@@ -71,10 +72,4 @@ fn run_part2(file_name: String) {
         }
     }
     println!("{0}result: {1}", if is_sample {"sample "} else {""} ,total_cost);
-}
-
-fn print_if_sample(is_sample: bool, message: String) {
-    if is_sample {
-        println!("{}", message);
-    }
 }
