@@ -1,5 +1,3 @@
-extern crate rand;
-
 use std::io::{BufReader, BufRead};
 use std::fs::File;
 //use crate::helper::print_if_sample;
