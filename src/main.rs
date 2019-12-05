@@ -5,10 +5,11 @@ mod day1_fuel_calc;
 mod day2_intcode;
 mod day3_crossing;
 mod day4_passwords;
+mod day5_airco;
 mod helper;
 
 fn main() {
-    let day_to_execute = 4;
+    let day_to_execute = 5;
     let part_to_execute = 2;
 
     let mut things_to_execute: HashMap<(i32, i32), fn() -> ()> = HashMap::new();
@@ -21,6 +22,8 @@ fn main() {
     things_to_execute.insert((3, 2), day3_crossing::exec_part2);
     things_to_execute.insert((4, 1), day4_passwords::exec_part1);
     things_to_execute.insert((4, 2), day4_passwords::exec_part2);
+    things_to_execute.insert((5, 1), day5_airco::exec_part1);
+    things_to_execute.insert((5, 2), day5_airco::exec_part2);
 
     let thing_to_execute = things_to_execute.get(&(day_to_execute, part_to_execute));
     if thing_to_execute.is_some() {
